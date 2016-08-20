@@ -13,11 +13,15 @@
  *= require_tree .
  *= require_self
  */
- $body-bg:    #3498db;
- $navbar-default-bg:  #ecf0f1;
- $navbar-default-color:    #c0392b;
- $navbar-default-link-color:    #c0392b;
+
+@import 'https://fonts.googleapis.com/css?family=Lato';
+
  
+ $body-bg:    #bdc3c7;
+ $navbar-default-bg:  #3498db;
+ $navbar-default-color:    #c0392b;
+ $navbar-default-link-color:    white;
+
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
