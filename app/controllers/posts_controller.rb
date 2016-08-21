@@ -1,5 +1,8 @@
 class PostsController < ApplicationController 
 
+	before_action :authenticate_user!, except: [:index]
+	before_action :find_post, only: [:show, :edit, :update, :destroy]
+
 	def index
 		@posts = Post.all
 	end
@@ -11,31 +14,31 @@ class PostsController < ApplicationController
 	def create
 		@post = Post.new(posts_params)
 		if @post.save
-			redirect_to @post
+			redirect_to @post, notice: 'Post was successfully created.'
 		else
 			render 'new'
 		end
 	end
 
 	def show
-		@post = Post.find(params[:id])
+		
 	end
 
 	def edit
-		@post = Post.find(params[:id])
+		
 	end
 
 	def update
-		@post = Post.find(params[:id])
+		
 			if @post.update(posts_params)
-				redirect_to @post
+				redirect_to @post, notice: 'Post was successfully updated.'
 			else
 				render 'edit'
 			end
 	end
 
 	def destroy
-		@post = Post.find(params[:id])
+		
 		@post.destroy
 		redirect_to root_path
 	end
@@ -45,6 +48,10 @@ class PostsController < ApplicationController
 	end
 
 	private
+
+	def find_post
+		@post = Post.find(params[:id])
+	end
 
 	def posts_params
 		params.require(:post).permit(:title, :body)

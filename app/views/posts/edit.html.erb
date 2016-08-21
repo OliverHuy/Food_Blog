@@ -1,7 +1,8 @@
-<%= form_for @post do |f| %><br>
-<%= f.label :title %><br>
-<%= f.text_field :title %><br>
-<%= f.label :body %><br>
-<%= f.text_area :body %><br>
-<%= f.submit %><br>
-<% end %>
+<div class="panel panel-default">
+
+  <div class="panel-heading">
+      <h3 class="panel-title">Edit Post</h3>
+  </div>
+  
+  <%= render 'form' %>
+</div>
