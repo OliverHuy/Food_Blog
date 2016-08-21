@@ -31,7 +31,9 @@
        
       <li><a data-toggle="modal" data-target=".bs-example-modal-lg">About</a></li>
 
-      <% if user_signed_in? %>       
+      <% if user_signed_in? %>
+               
+          <li><%= link_to "Setting", edit_user_registration_path %></li>   
           <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>  
       <% else %>
           <li><%= link_to "Log In", new_user_session_path, class: "btn btn-primary btn-sm" %></li>
