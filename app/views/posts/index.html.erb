@@ -1,15 +1,34 @@
 <!-- wrap around page-->
 	<div class ="jumbotron center">
 		<h2><p>Wellcome</p></h2>
-		 		<iframe src="https://player.vimeo.com/video/92681878?color=ab253a&title=0&byline=0&portrait=0" width="350" height="197" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-		
-			<% @posts.each do |post| %>
-				<h4><%= link_to post.title, post_path(post) %></h4>
-				<%= link_to 'Edit', edit_post_path(post) %>
-				<%= link_to 'Delete', delete_post_path(post), method: :delete, data: {confirm: 'Are you sure?'} %>
-			<% end %>
+		 		<iframe src="https://player.vimeo.com/video/92681878?color=ab253a&title=0&byline=0&portrait=0" width="350" height="197" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>		
 	</div>	
+	<div class="jumbotron">
+		<table>
+		  <thead>
+		    <tr>
+		      
+		      <th></th>
+		      <th></th>
+		      <th></th>
+			  <th></th>
+		    </tr>
+		  </thead>
+
+		  <tbody>
+		    <% @posts.each do |post| %>
+		      <tr>
+			        <td><h4><%= link_to post.title, post_path(post) %></h4></td>
+			        <td><%= post.user.email %></td>
+		        <% if post.user == current_user %>
+			        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+			        <td><%= link_to 'Delete', delete_post_path(post), method: :delete, data: {confirm: 'Are you sure?'} %></td>
+		        <% end %>
+		      </tr>
+		    <% end %>
+		  </tbody>
+		</table>
+	</div>
 
 
 
