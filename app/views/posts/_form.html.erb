@@ -1,15 +1,17 @@
 <div class="panel-body">
 
 
-		<%= form_for @post do |f| %><br>
+		<%= form_for @post, html: { multipart: true } do |f| %><br>
+
 	<div class="form-group">
 		<%= f.label :title %><br>
 		<%= f.text_field :title, class: "form-control"%><br>
 	</div>
 	<div class="form-group">
-		<%= f.label :body %><br>
-		<%= f.text_area :body, class: "form-control" %><br>
+		<%= f.label :image %><br>
+		<%= f.file_field :image, class: "form-control" %><br>
 	</div>
+	
 	
 	<div class="form-group">
           <%= f.submit "Submit", class: "btn btn-warning" %>
