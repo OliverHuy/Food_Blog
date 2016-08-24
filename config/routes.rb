@@ -18,4 +18,6 @@ Rails.application.routes.draw do
     delete '/posts/:id' => 'posts#destroy', as: :delete_post
 
     get '/about' => 'posts#about'
+
+    get '/chanel' => 'posts#chanel'
 end

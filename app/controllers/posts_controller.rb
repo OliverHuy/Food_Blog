@@ -49,6 +49,10 @@ class PostsController < ApplicationController
 		
 	end
 
+	def chanel
+		
+	end
+
 	private
 
 	def find_post
