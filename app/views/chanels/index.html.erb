@@ -1,4 +1,4 @@
 <% @chanels.each do |chanel| %>
 	<%= image_tag chanel.image(:medium) %>
-	<%= link_to "delete", delete_chanel_path(chanel), method: :delete, data: {confirm: " Sure"} %>
+	
 <% end %>
