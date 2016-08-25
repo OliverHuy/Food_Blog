@@ -31,6 +31,8 @@ gem 'devise'
 
 gem "paperclip", "~> 5.0.0"
 
+gem 'aws-sdk', '~> 2.3'
+
 
 
 # Use Redis adapter to run Action Cable in production

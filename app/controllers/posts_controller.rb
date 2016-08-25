@@ -1,6 +1,6 @@
 class PostsController < ApplicationController 
 
-	before_action :authenticate_user!, except: [:index, :show]
+	
 	before_action :find_post, only: [:show, :edit, :update, :destroy]
 
 	def index
@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
 	def new
 		@post = Post.new
-		@post.user_id = current_user.id
+		
 	end
 
 	def create
@@ -49,9 +49,7 @@ class PostsController < ApplicationController
 		
 	end
 
-	def chanel
-		
-	end
+	
 
 	private
 

@@ -1,8 +1,5 @@
 <!-- wrap around page-->
-	<div class ="jumbotron center">
-		<h2><p>Wellcome</p></h2>
-		 		<iframe src="https://player.vimeo.com/video/92681878?color=ab253a&title=0&byline=0&portrait=0" width="350" height="197" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>		
-	</div>	
+	
 	<div class="jumbotron">
 		<table>
 		  <thead>
@@ -19,7 +16,7 @@
 		    <% @posts.each do |post| %>
 		      <tr>
 			        
-			        <td><%= link_to (image_tag post.image.url(:medium))%></td>
+			        <td><%= link_to (image_tag post.image.url(:thumb))%></td>
 			        
 		        <% if post.user == current_user %>
 			        <td><%= link_to 'Edit', edit_post_path(post) %></td>

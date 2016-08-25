@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
-	root 'posts#index'
+	root 'chanels#index'
 
 	get '/posts' => 'posts#index'
 
@@ -19,5 +19,13 @@ Rails.application.routes.draw do
 
     get '/about' => 'posts#about'
 
-    get '/chanel' => 'posts#chanel'
+    get '/chanels' => 'chanels#index'
+
+    get '/chanels/new' => 'chanels#new'
+
+    post 'chanels' => 'chanels#create'
+
+    get '/chanels/:id' => 'chanels#show', as: :chanel
+
+    delete '/chanels/:id' => 'chanels#destroy', as: :delete_chanel
 end
