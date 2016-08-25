@@ -1,5 +1,6 @@
 
 <h4><%= @post.title %></h4>
+<td><%= image_tag @post.image(:medium) %></td>
 <div><%= @post.body %></div><br>
 <%= link_to 'Back', root_path %>
 <% if @post.user == current_user %>
