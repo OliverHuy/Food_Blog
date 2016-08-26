@@ -1,4 +1,18 @@
-<% @chanels.each do |chanel| %>
-	<%= image_tag chanel.image(:medium) %>
-	
-<% end %>
+<div id="chanel" class="transitions-enabled">
+
+	<% @chanels.each do |chanel| %>
+
+		<div class ="box panel panel-default">
+				<%= image_tag chanel.image(:medium) %>
+				<div class="panel-body">
+					<%= link_to 'Show', chanel_path(chanel) %>
+					<%= link_to 'Delete', delete_chanel_path(chanel), method: :delete %>
+				</div>
+
+		</div>
+	<% end %>
+
+</div>
+
+
+
