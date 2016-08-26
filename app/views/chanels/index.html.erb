@@ -3,9 +3,11 @@
 	<% @chanels.each do |chanel| %>
 
 		<div class ="box panel panel-default">
-				<%= image_tag chanel.image(:medium) %>
+				<div data-toggle="modal" data-target="#myModal"%><%= image_tag(chanel.image(:medium)) %></div>
+
 				<div class="panel-body">
-					<%= link_to 'Show', chanel_path(chanel) %>
+								<%= render 'form' %>
+														
 					<%= link_to 'Delete', delete_chanel_path(chanel), method: :delete %>
 				</div>
 
