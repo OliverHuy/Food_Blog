@@ -1,11 +1,9 @@
 class AddAttachmentImageToChanels < ActiveRecord::Migration
-  def self.up
-    change_table :chanels do |t|
-      t.attachment :image
-    end
+  def up
+    add_attachment :chenals, :image
   end
 
-  def self.down
+  def down
     remove_attachment :chanels, :image
   end
 end
