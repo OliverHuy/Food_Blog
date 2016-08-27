@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160824233757) do
+ActiveRecord::Schema.define(version: 20160826223634) do
 
   create_table "chanels", force: :cascade do |t|
     t.string   "picture"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 20160824233757) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "title"
+    t.text     "body"
   end
 
   create_table "posts", force: :cascade do |t|

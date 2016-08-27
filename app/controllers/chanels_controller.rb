@@ -30,7 +30,7 @@ class ChanelsController < ApplicationController
 	private
 
 	def chanel_params
-		params.require(:chanel).permit(:picture, :image)
+		params.require(:chanel).permit(:picture, :image, :body, :title)
 	end
 
 end 
