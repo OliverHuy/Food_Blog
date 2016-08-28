@@ -4,7 +4,7 @@
         <div class="box panel panel-default">
 
             <%= link_to "#", data: {toggle: "modal", target: "#modal#{chanel.id}"} do %>
-                <%= image_tag chanel.image %>
+                <%= image_tag chanel.image.url(:thumb) %>
                     <div class="panel-body">
                         <%= link_to 'Show', chanel_path(chanel) %>
                         <%= link_to 'Delete', delete_chanel_path(chanel), method: :delete %>
