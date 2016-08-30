@@ -1,9 +1,10 @@
-<div class="">
-<div class="row">
-    
 
+    
+<div class="jumbotron">
+
+<div id="chanel" class="transitions-enabled">
     <% @chanels.each do |chanel| %>
-        <div class="col-md-3">
+        <div class="box panel panel-default">
 
             <%= link_to "#", data: {toggle: "modal", target: "#modal#{chanel.id}"} do %>
                 <%= image_tag chanel.image.url(:medium) %>
